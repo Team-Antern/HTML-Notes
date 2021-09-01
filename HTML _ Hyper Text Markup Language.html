@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        HTML : Hyper Text Markup Language - Antern
+    </title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/html-5--v1.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.figma{display:table;position:relative;width:100%;padding-bottom:56.25%}.figma iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:1px solid #eee}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true" style=""><h1 id="HTML--Hyper-Text-Markup-Language" data-id="HTML--Hyper-Text-Markup-Language" style=""><a class="anchor hidden-xs" href="#HTML--Hyper-Text-Markup-Language" title="HTML--Hyper-Text-Markup-Language"><span class="octicon octicon-link"></span></a><center><b><span>HTML : Hyper Text Markup Language</span></b></center></h1><h2 id="-Listings-and-Instructions" data-id="-Listings-and-Instructions" style=""><a class="anchor hidden-xs" href="#-Listings-and-Instructions" title="-Listings-and-Instructions"><span class="octicon octicon-link"></span></a><img class="emoji" alt=":open_file_folder:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/open_file_folder.png"><span> </span><em><span>Listings and Instructions</span></em></h2><ol>
+<li><span>This is for absolute beginners who wants to get knowledge of HTML.</span></li>
+<li><span>Stay tuned with us on Youtube for quality content and explanation </span><a href="https://youtube.com/channel/UCIpbqdvNWx50J79KAG1Q21A" target="_blank" rel="noopener"><strong><span>Antern</span></strong></a><span> and follow Team Antern on LinkedIn for free contents </span><a href="https://www.linkedin.com/company/team-antern" target="_blank" rel="noopener"><strong><span>LinkedIn</span></strong></a></li>
+<li><img class="emoji" alt=":memo:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/memo.png"><span> Keep taking notes of important points.</span></li>
+<li><span>For Doubt Support and Suggestions join our </span><a href="https://discord.gg/UVsX294GeW" target="_blank" rel="noopener"><strong><span>Discord Community</span></strong></a><span>.</span></li>
+</ol><hr><h2 id="-Content-Index" data-id="-Content-Index"><a class="anchor hidden-xs" href="#-Content-Index" title="-Content-Index"><span class="octicon octicon-link"></span></a><img class="emoji" alt=":blue_book:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/blue_book.png"><span> </span><em><span>Content Index</span></em></h2><ul>
+<li><a href="#Introduction"><span>Introduction</span></a></li>
+<li><a href="#Elements"><span>HTML Elements</span></a></li>
+<li><a href="#Attributes"><span>HTML Attributes</span></a></li>
+<li><a href="#Basic-Structure"><span>Basic Structure</span></a></li>
+<li><a href="#Basic-Tags"><span>Basic Tags</span></a></li>
+<li><a href="#TextParagraphs"><span>Text/Paragraph</span></a>
+<ul>
+<li><a href="#Code-Snippet"><span>Code Snippet</span></a></li>
+</ul>
+</li>
+<li><a href="#Text-Formatting"><span>Text Formatting</span></a></li>
+<li><a href="#Code"><span>Code</span></a></li>
+<li><a href="#Lists"><span>Lists</span></a>
+<ul>
+<li><a href="#Ordered-Lists"><span>Ordered Lists</span></a></li>
+<li><a href="#Unordered-Lists"><span>Unordered Lists</span></a></li>
+</ul>
+</li>
+<li><a href="#Links"><span>Links</span></a></li>
+<li><a href="#Tables"><span>Tables</span></a></li>
+<li><a href="#Media"><span>Media</span></a>
+<ul>
+<li><a href="#Image"><span>Image</span></a></li>
+<li><a href="#Audio"><span>Audio</span></a></li>
+<li><a href="#Video"><span>Video</span></a></li>
+</ul>
+</li>
+<li><a href="#Forms"><span>Forms</span></a></li>
+<li><a href="#Container-Tags"><span>Container Tags</span></a></li>
+<li><a href="#HTML-Semantics"><span>HTML Semantics</span></a></li>
+<li><a href="#Meta-Properties"><span>Meta Properties</span></a></li>
+</ul><hr><h2 id="Introduction" data-id="Introduction"><a class="anchor hidden-xs" href="#Introduction" title="Introduction"><span class="octicon octicon-link"></span></a><span>Introduction</span></h2><h5 id="HTML-is-the-very-basic-building-block-for-a-website-HTML-is-the-bone-of-the-website-We-use-it-to-structure-our-website-then-we-style-it-using-CSSCascading-StyleSheet-and-provide-behaviour-and-interaction-through-JavaScript" data-id="HTML-is-the-very-basic-building-block-for-a-website-HTML-is-the-bone-of-the-website-We-use-it-to-structure-our-website-then-we-style-it-using-CSSCascading-StyleSheet-and-provide-behaviour-and-interaction-through-JavaScript"><a class="anchor hidden-xs" href="#HTML-is-the-very-basic-building-block-for-a-website-HTML-is-the-bone-of-the-website-We-use-it-to-structure-our-website-then-we-style-it-using-CSSCascading-StyleSheet-and-provide-behaviour-and-interaction-through-JavaScript" title="HTML-is-the-very-basic-building-block-for-a-website-HTML-is-the-bone-of-the-website-We-use-it-to-structure-our-website-then-we-style-it-using-CSSCascading-StyleSheet-and-provide-behaviour-and-interaction-through-JavaScript"><span class="octicon octicon-link"></span></a>HTML is the very basic building block for a website. HTML is the bone of the website. We use it to structure our website then we style it using CSS(Cascading StyleSheet) and provide behaviour and interaction through JavaScript.</h5><p><img src="https://i.imgur.com/iyZsjtv.jpg" alt="Structure Example" loading="lazy"></p><h6 id="HTML--Structure-CSS--Styling-JavaScript--Behaviour-Interaction-etc" data-id="HTML--Structure-CSS--Styling-JavaScript--Behaviour-Interaction-etc"><a class="anchor hidden-xs" href="#HTML--Structure-CSS--Styling-JavaScript--Behaviour-Interaction-etc" title="HTML--Structure-CSS--Styling-JavaScript--Behaviour-Interaction-etc"><span class="octicon octicon-link"></span></a>
+HTML : Structure,<br>
+CSS : Styling,<br>
+JavaScript : Behaviour, Interaction, etc.
+</h6><h2 id="Elements" data-id="Elements"><a class="anchor hidden-xs" href="#Elements" title="Elements"><span class="octicon octicon-link"></span></a><span>Elements</span></h2><h5 id="HTML-Tags-helps-in-creating-elements-and-declaring-web-page-information-For-understanding-html-elements-easily-lets-say-that-tags-are-used-to-perform-some-functions" data-id="HTML-Tags-helps-in-creating-elements-and-declaring-web-page-information-For-understanding-html-elements-easily-lets-say-that-tags-are-used-to-perform-some-functions"><a class="anchor hidden-xs" href="#HTML-Tags-helps-in-creating-elements-and-declaring-web-page-information-For-understanding-html-elements-easily-lets-say-that-tags-are-used-to-perform-some-functions" title="HTML-Tags-helps-in-creating-elements-and-declaring-web-page-information-For-understanding-html-elements-easily-lets-say-that-tags-are-used-to-perform-some-functions"><span class="octicon octicon-link"></span></a>HTML Tags helps in creating elements and declaring web page information.
+For understanding html elements easily let's say that tags are used to perform some functions.</h5><h5 id="Paragraphs-are-elements-and-they-are-created-with-p-tag-Tags-have-3-parts" data-id="Paragraphs-are-elements-and-they-are-created-with-p-tag-Tags-have-3-parts"><a class="anchor hidden-xs" href="#Paragraphs-are-elements-and-they-are-created-with-p-tag-Tags-have-3-parts" title="Paragraphs-are-elements-and-they-are-created-with-p-tag-Tags-have-3-parts"><span class="octicon octicon-link"></span></a>Paragraphs are elements and they are created with "p" tag.
+Tags have 3 parts:</h5><h5 id="Opening-Tag---It-helps-to-start-the-function-performed-by-tag" data-id="Opening-Tag---It-helps-to-start-the-function-performed-by-tag"><a class="anchor hidden-xs" href="#Opening-Tag---It-helps-to-start-the-function-performed-by-tag" title="Opening-Tag---It-helps-to-start-the-function-performed-by-tag"><span class="octicon octicon-link"></span></a>Opening Tag - It helps to start the function performed by tag.</h5><p><code>&lt;tagname&gt;</code></p><h5 id="Closing-Tag---It-helps-to-end-the-function-performed-by-a-tag" data-id="Closing-Tag---It-helps-to-end-the-function-performed-by-a-tag"><a class="anchor hidden-xs" href="#Closing-Tag---It-helps-to-end-the-function-performed-by-a-tag" title="Closing-Tag---It-helps-to-end-the-function-performed-by-a-tag"><span class="octicon octicon-link"></span></a>Closing Tag - It helps to end the function performed by a tag.</h5><p><code>&lt;/tagname&gt;</code></p><h5 id="Content---It-is-the-thing-over-which-function-is-performed" data-id="Content---It-is-the-thing-over-which-function-is-performed"><a class="anchor hidden-xs" href="#Content---It-is-the-thing-over-which-function-is-performed" title="Content---It-is-the-thing-over-which-function-is-performed"><span class="octicon octicon-link"></span></a>Content - It is the thing over which function is performed</h5><h5 id="Example" data-id="Example"><a class="anchor hidden-xs" href="#Example" title="Example"><span class="octicon octicon-link"></span></a>Example</h5><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code">&lt;<span class="hljs-selector-tag">p</span>&gt;<span class="hljs-attribute">Content</span>&lt;/<span class="hljs-selector-tag">p</span>&gt;
+</div></div></code></pre><h2 id="Attributes" data-id="Attributes"><a class="anchor hidden-xs" href="#Attributes" title="Attributes"><span class="octicon octicon-link"></span></a><span>Attributes</span></h2><h5 id="Attributes-adds-additional-information-about-the-HTML-Elements" data-id="Attributes-adds-additional-information-about-the-HTML-Elements"><a class="anchor hidden-xs" href="#Attributes-adds-additional-information-about-the-HTML-Elements" title="Attributes-adds-additional-information-about-the-HTML-Elements"><span class="octicon octicon-link"></span></a>Attributes adds additional information about the HTML Elements.</h5><h4 id="Notes" data-id="Notes"><a class="anchor hidden-xs" href="#Notes" title="Notes"><span class="octicon octicon-link"></span></a>Notes</h4><ul>
+<li><span>Attributes are specified within the starting tag</span></li>
+<li><span>All the html elements can have attributes</span></li>
+</ul><h4 id="Example1" data-id="Example"><a class="anchor hidden-xs" href="#Example1" title="Example1"><span class="octicon octicon-link"></span></a>Example</h4><h5 id="Lets-take-an-example-of-the-image-tag" data-id="Lets-take-an-example-of-the-image-tag"><a class="anchor hidden-xs" href="#Lets-take-an-example-of-the-image-tag" title="Lets-take-an-example-of-the-image-tag"><span class="octicon octicon-link"></span></a>Let's take an example of the image tag</h5><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"image.png"</span> &gt;</span>
+</div></div></code></pre><h5 id="In-this-example-img-is-the-tag-and-src-is-the-attribute" data-id="In-this-example-img-is-the-tag-and-src-is-the-attribute"><a class="anchor hidden-xs" href="#In-this-example-img-is-the-tag-and-src-is-the-attribute" title="In-this-example-img-is-the-tag-and-src-is-the-attribute"><span class="octicon octicon-link"></span></a>In this example img is the tag and src is the attribute</h5><h5 id="We-would-be-exploring-this-img-tag-later-on-in-this-cheat-sheet-But-for-now-I-would-give-a-very-basic-idea-what-it-does" data-id="We-would-be-exploring-this-img-tag-later-on-in-this-cheat-sheet-But-for-now-I-would-give-a-very-basic-idea-what-it-does"><a class="anchor hidden-xs" href="#We-would-be-exploring-this-img-tag-later-on-in-this-cheat-sheet-But-for-now-I-would-give-a-very-basic-idea-what-it-does" title="We-would-be-exploring-this-img-tag-later-on-in-this-cheat-sheet-But-for-now-I-would-give-a-very-basic-idea-what-it-does"><span class="octicon octicon-link"></span></a>We would be exploring this img tag later on in this cheat sheet. But for now I would give a very basic idea what it does.</h5><h5 id="It-basically-helps-us-to-add-any-sort-of-image-in-our-html-document" data-id="It-basically-helps-us-to-add-any-sort-of-image-in-our-html-document"><a class="anchor hidden-xs" href="#It-basically-helps-us-to-add-any-sort-of-image-in-our-html-document" title="It-basically-helps-us-to-add-any-sort-of-image-in-our-html-document"><span class="octicon octicon-link"></span></a>It basically helps us to add any sort of image in our html document.</h5><h2 id="Basic-Structure" data-id="Basic-Structure"><a class="anchor hidden-xs" href="#Basic-Structure" title="Basic-Structure"><span class="octicon octicon-link"></span></a><span>Basic Structure</span></h2><pre><code class="htmlmixed hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</div></div></code></pre><h2 id="Basic-Tags" data-id="Basic-Tags"><a class="anchor hidden-xs" href="#Basic-Tags" title="Basic-Tags"><span class="octicon octicon-link"></span></a><span>Basic Tags</span></h2><ul>
+<li><code>&lt;!DOCTYPE html&gt;</code><span> : It’s an information to the browser what type of document it is</span></li>
+<li><code>&lt;html&gt;&lt;/html&gt;</code><span> : Creates an HTML Document</span></li>
+<li><code>&lt;head&gt;&lt;/head&gt;</code><span> : This tag consists of MetaData, Title, etc.</span></li>
+<li><code>&lt;body&gt;&lt;/body&gt;</code><span> : This tag is used to define the HTML Document’s body</span></li>
+<li><code>&lt;title&gt;&lt;/title&gt;</code><span> : Used to give HTML Document a title</span></li>
+<li><code>&lt;style&gt;&lt;/style&gt;</code><span> : Used to add internal css</span></li>
+<li><code>&lt;meta&gt;&lt;/meta&gt;</code><span> : It is used to define META DATA about the HTML Document</span></li>
+<li><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code><span> : It is used to add external resources to our html document such as StyleSheets</span></li>
+</ul><h2 id="TextParagraphs" data-id="TextParagraphs"><a class="anchor hidden-xs" href="#TextParagraphs" title="TextParagraphs"><span class="octicon octicon-link"></span></a><span>Text/Paragraphs</span></h2><h3 id="Code-Snippet" data-id="Code-Snippet"><a class="anchor hidden-xs" href="#Code-Snippet" title="Code-Snippet"><span class="octicon octicon-link"></span></a><span>Code Snippet</span></h3><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">&lt;<span class="hljs-selector-tag">h1</span>&gt;<span class="hljs-selector-tag">Header</span> One&lt;/<span class="hljs-selector-tag">h1</span>&gt;
+&lt;<span class="hljs-selector-tag">h2</span>&gt;<span class="hljs-selector-tag">Header</span> Two&lt;/<span class="hljs-selector-tag">h2</span>&gt;
+&lt;<span class="hljs-selector-tag">h3</span>&gt;<span class="hljs-selector-tag">Header</span> Three&lt;/<span class="hljs-selector-tag">h3</span>&gt;
+&lt;<span class="hljs-selector-tag">h4</span>&gt;<span class="hljs-selector-tag">Header</span> Four&lt;/<span class="hljs-selector-tag">h4</span>&gt;
+&lt;<span class="hljs-selector-tag">h5</span>&gt;<span class="hljs-selector-tag">Header</span> Five&lt;/<span class="hljs-selector-tag">h5</span>&gt;
+&lt;<span class="hljs-selector-tag">h6</span>&gt;<span class="hljs-selector-tag">Header</span> Six&lt;/<span class="hljs-selector-tag">h6</span>&gt;
+&lt;<span class="hljs-selector-tag">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/<span class="hljs-selector-tag">p</span>&gt;
+
+&lt;<span class="hljs-selector-tag">p</span>&gt;Lorem ipsum dolor &lt;br&gt; sit amet&lt;/<span class="hljs-selector-tag">p</span>&gt;
+&lt;pre&gt;Hello, Readers&lt;/pre&gt;
+</div></div></code></pre><h4 id="There-are-total-6-heading-tags-availiable-in-HTML-and-amongst-them-h1-is-the-largest-and-h6-is-the-smallest" data-id="There-are-total-6-heading-tags-availiable-in-HTML-and-amongst-them-h1-is-the-largest-and-h6-is-the-smallest"><a class="anchor hidden-xs" href="#There-are-total-6-heading-tags-availiable-in-HTML-and-amongst-them-h1-is-the-largest-and-h6-is-the-smallest" title="There-are-total-6-heading-tags-availiable-in-HTML-and-amongst-them-h1-is-the-largest-and-h6-is-the-smallest"><span class="octicon octicon-link"></span></a>There are total 6 heading tags availiable in HTML and amongst them h1 is the largest and h6 is the smallest.</h4><ul>
+<li><code>&lt;h1&gt;&lt;/h1&gt;</code><span> : Heading 1</span></li>
+<li><code>&lt;h2&gt;&lt;/h2&gt;</code><span> : Heading 2</span></li>
+<li><code>&lt;h3&gt;&lt;/h3&gt;</code><span> : Heading 3</span></li>
+<li><code>&lt;h4&gt;&lt;/h4&gt;</code><span> : Heading 4</span></li>
+<li><code>&lt;h5&gt;&lt;/h5&gt;</code><span> : Heading 5</span></li>
+<li><code>&lt;h6&gt;&lt;/h6&gt;</code><span> : Heading 6</span></li>
+</ul><h4 id="There-is-one-Paragraph-tag-that-is-used-to-write-paragraphs-in-HTML" data-id="There-is-one-Paragraph-tag-that-is-used-to-write-paragraphs-in-HTML"><a class="anchor hidden-xs" href="#There-is-one-Paragraph-tag-that-is-used-to-write-paragraphs-in-HTML" title="There-is-one-Paragraph-tag-that-is-used-to-write-paragraphs-in-HTML"><span class="octicon octicon-link"></span></a>There is one Paragraph tag that is used to write paragraphs in HTML</h4><ul>
+<li><code>&lt;p&gt;&lt;/p&gt;</code><span> : Paragraph</span></li>
+</ul><h4 id="To-add-line-breaks-we-use-br-tag-for-it" data-id="To-add-line-breaks-we-use-br-tag-for-it"><a class="anchor hidden-xs" href="#To-add-line-breaks-we-use-br-tag-for-it" title="To-add-line-breaks-we-use-br-tag-for-it"><span class="octicon octicon-link"></span></a>To add line breaks we use br tag for it</h4><ul>
+<li><code>&lt;br&gt;</code><span> : Break</span></li>
+</ul><h4 id="In-HTML-we-can-also-include-pre-formatted-text" data-id="In-HTML-we-can-also-include-pre-formatted-text"><a class="anchor hidden-xs" href="#In-HTML-we-can-also-include-pre-formatted-text" title="In-HTML-we-can-also-include-pre-formatted-text"><span class="octicon octicon-link"></span></a>In HTML we can also include pre formatted text</h4><ul>
+<li><code>&lt;pre&gt;&lt;/pre&gt;</code><span> : Pre Formatted Text</span></li>
+</ul><h2 id="Text-Formatting" data-id="Text-Formatting"><a class="anchor hidden-xs" href="#Text-Formatting" title="Text-Formatting"><span class="octicon octicon-link"></span></a><span>Text Formatting</span></h2><h4 id="In-HTML-we-have-multiple-tags-to-format-text-we-can-format-text-to-italic-bold-etc" data-id="In-HTML-we-have-multiple-tags-to-format-text-we-can-format-text-to-italic-bold-etc"><a class="anchor hidden-xs" href="#In-HTML-we-have-multiple-tags-to-format-text-we-can-format-text-to-italic-bold-etc" title="In-HTML-we-have-multiple-tags-to-format-text-we-can-format-text-to-italic-bold-etc"><span class="octicon octicon-link"></span></a>In HTML we have multiple tags to format text, we can format text to italic, bold, etc.</h4><pre><code class="htmlmixed hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>bold<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>strong<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>italic<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>emphasized<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">sub</span>&gt;</span>subscripted<span class="hljs-tag">&lt;/<span class="hljs-name">sub</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">sup</span>&gt;</span>super scripted<span class="hljs-tag">&lt;/<span class="hljs-name">sup</span>&gt;</span>
+</div></div></code></pre><ul>
+<li><code>&lt;b&gt;&lt;/b&gt;</code><span> : To make the text </span><b><span>bold</span></b></li>
+<li><code>&lt;strong&gt;&lt;/strong&gt;</code><span> : </span><strong><span>strong</span></strong><span> is like </span><b><span>bold</span></b><span> but it is semantic</span></li>
+<li><code>&lt;i&gt;&lt;/i&gt;</code><span> : To make the text </span><i><span>italic</span></i></li>
+<li><code>&lt;em&gt;&lt;/em&gt;</code><span> : </span><em><span>emphasized</span></em><span> is like </span><i><span>italic</span></i><span> but it is semantic</span></li>
+<li><code>&lt;sub&gt;&lt;/sub&gt;</code><span> : To make the text </span><sub><span>subscripted</span></sub></li>
+<li><code>&lt;sup&gt;&lt;/sup&gt;</code><span> : To make the text </span><sup><span>super scripted</span></sup></li>
+</ul><h2 id="Code" data-id="Code"><a class="anchor hidden-xs" href="#Code" title="Code"><span class="octicon octicon-link"></span></a><span>Code</span></h2><h4 id="Code-tag-is-used-to-show-code-snippets-in-html" data-id="Code-tag-is-used-to-show-code-snippets-in-html"><a class="anchor hidden-xs" href="#Code-tag-is-used-to-show-code-snippets-in-html" title="Code-tag-is-used-to-show-code-snippets-in-html"><span class="octicon octicon-link"></span></a>Code tag is used to show code snippets in html</h4><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code">&lt;code&gt;<span class="hljs-built_in">print</span>(<span class="hljs-string">"Hello, Anternians"</span>)&lt;/code&gt;
+</div></div></code></pre><h2 id="Lists" data-id="Lists"><a class="anchor hidden-xs" href="#Lists" title="Lists"><span class="octicon octicon-link"></span></a><span>Lists</span></h2><h4 id="Lists-are-basically-used-to-list-down-items-There-are-multiple-types-of-lists-such-as-bullets-numbers-etc-In-HTML-there-are-3-Tags-ol-li-ul" data-id="Lists-are-basically-used-to-list-down-items-There-are-multiple-types-of-lists-such-as-bullets-numbers-etc-In-HTML-there-are-3-Tags-ol-li-ul"><a class="anchor hidden-xs" href="#Lists-are-basically-used-to-list-down-items-There-are-multiple-types-of-lists-such-as-bullets-numbers-etc-In-HTML-there-are-3-Tags-ol-li-ul" title="Lists-are-basically-used-to-list-down-items-There-are-multiple-types-of-lists-such-as-bullets-numbers-etc-In-HTML-there-are-3-Tags-ol-li-ul"><span class="octicon octicon-link"></span></a>Lists are basically used to list down items. There are multiple types of lists such as bullets, numbers, etc. In HTML there are 3 Tags ol, li, ul</h4><h3 id="Ordered-Lists" data-id="Ordered-Lists" style=""><a class="anchor hidden-xs" href="#Ordered-Lists" title="Ordered-Lists"><span class="octicon octicon-link"></span></a>Ordered Lists</h3><h4 id="Ordered-Lists-can-be-alphabetical-or-numerical-Inside-of-Ordered-Lists-we-include-list-items" data-id="Ordered-Lists-can-be-alphabetical-or-numerical-Inside-of-Ordered-Lists-we-include-list-items"><a class="anchor hidden-xs" href="#Ordered-Lists-can-be-alphabetical-or-numerical-Inside-of-Ordered-Lists-we-include-list-items" title="Ordered-Lists-can-be-alphabetical-or-numerical-Inside-of-Ordered-Lists-we-include-list-items"><span class="octicon octicon-link"></span></a>Ordered Lists can be alphabetical or numerical. Inside of Ordered Lists we include list items.</h4><ul>
+<li><code>&lt;ol&gt;&lt;/ol&gt;</code><span> : Ordered Lists</span></li>
+<li><code>&lt;li&gt;&lt;/li&gt;</code><span> : List Items</span></li>
+</ul><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">&lt;<span class="hljs-selector-tag">ol</span>&gt;
+    &lt;<span class="hljs-selector-tag">li</span>&gt;Java&lt;/<span class="hljs-selector-tag">li</span>&gt;
+    &lt;<span class="hljs-selector-tag">li</span>&gt;Python&lt;/<span class="hljs-selector-tag">li</span>&gt;
+    &lt;<span class="hljs-selector-tag">li</span>&gt;JavaScript&lt;/<span class="hljs-selector-tag">li</span>&gt;
+&lt;/<span class="hljs-selector-tag">ol</span>&gt;
+</div></div></code></pre><h3 id="Unordered-Lists" data-id="Unordered-Lists" style=""><a class="anchor hidden-xs" href="#Unordered-Lists" title="Unordered-Lists"><span class="octicon octicon-link"></span></a>Unordered Lists</h3><h4 id="Unordered-Lists-are-bulleted-lists-Inside-of-Unordered-Lists-we-include-list-items" data-id="Unordered-Lists-are-bulleted-lists-Inside-of-Unordered-Lists-we-include-list-items"><a class="anchor hidden-xs" href="#Unordered-Lists-are-bulleted-lists-Inside-of-Unordered-Lists-we-include-list-items" title="Unordered-Lists-are-bulleted-lists-Inside-of-Unordered-Lists-we-include-list-items"><span class="octicon octicon-link"></span></a>Unordered Lists are bulleted lists. Inside of Unordered Lists we include list items.</h4><ul>
+<li><code>&lt;ul&gt;&lt;/ul&gt;</code><span> : Unordered Lists</span></li>
+<li><code>&lt;li&gt;&lt;/li&gt;</code><span> : List Items</span></li>
+</ul><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">&lt;<span class="hljs-selector-tag">ul</span>&gt;
+    &lt;<span class="hljs-selector-tag">li</span>&gt;Java&lt;/<span class="hljs-selector-tag">li</span>&gt;
+    &lt;<span class="hljs-selector-tag">li</span>&gt;Python&lt;/<span class="hljs-selector-tag">li</span>&gt;
+    &lt;<span class="hljs-selector-tag">li</span>&gt;JavaScript&lt;/<span class="hljs-selector-tag">li</span>&gt;
+&lt;/<span class="hljs-selector-tag">ul</span>&gt;
+</div></div></code></pre><h2 id="Links" data-id="Links"><a class="anchor hidden-xs" href="#Links" title="Links"><span class="octicon octicon-link"></span></a><span>Links</span></h2><h4 id="Links-are-clickable-and-with-that-we-can-redirect-to-another-page" data-id="Links-are-clickable-and-with-that-we-can-redirect-to-another-page"><a class="anchor hidden-xs" href="#Links-are-clickable-and-with-that-we-can-redirect-to-another-page" title="Links-are-clickable-and-with-that-we-can-redirect-to-another-page"><span class="octicon octicon-link"></span></a>Links are clickable and with that we can redirect to another page.</h4><h4 id="NOTE" data-id="NOTE"><a class="anchor hidden-xs" href="#NOTE" title="NOTE"><span class="octicon octicon-link"></span></a>NOTE: </h4><h5 id="There-are-2-types-of-URL" data-id="There-are-2-types-of-URL"><a class="anchor hidden-xs" href="#There-are-2-types-of-URL" title="There-are-2-types-of-URL"><span class="octicon octicon-link"></span></a>There are 2 types of URL</h5><ul>
+<li>
+<p><span>Absolute URL: It basically is external urls</span></p>
+<ul>
+<li><span>Example: </span><a href="https://antern.co/" target="_blank" rel="noopener"><span>https://antern.co/</span></a></li>
+</ul>
+</li>
+<li>
+<p><span>Relative URL: It basically is the location of a particular file within the folder</span></p>
+<ul>
+<li><span>Example: ./pages/details.html</span></li>
+</ul>
+</li>
+<li>
+<p><code>&lt;a&gt;&lt;/a&gt;</code><span> : With the help of Anchor tag we can add hyperlinks.</span></p>
+</li>
+</ul><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://antern.co/"</span>&gt;</span>Visit Antern Offical Website<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"./pages/details.html"</span>&gt;</span>Details page<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</div></div></code></pre><h2 id="Tables" data-id="Tables"><a class="anchor hidden-xs" href="#Tables" title="Tables"><span class="octicon octicon-link"></span></a><span>Tables</span></h2><h4 id="With-the-help-of-HTML-Table-we-can-arrange-the-data-in-tabular-form-Tables-are-a-collection-of-rows-and-columns" data-id="With-the-help-of-HTML-Table-we-can-arrange-the-data-in-tabular-form-Tables-are-a-collection-of-rows-and-columns"><a class="anchor hidden-xs" href="#With-the-help-of-HTML-Table-we-can-arrange-the-data-in-tabular-form-Tables-are-a-collection-of-rows-and-columns" title="With-the-help-of-HTML-Table-we-can-arrange-the-data-in-tabular-form-Tables-are-a-collection-of-rows-and-columns"><span class="octicon octicon-link"></span></a>With the help of HTML Table we can arrange the data in tabular form. Tables are a collection of rows and columns</h4><ul>
+<li><code>&lt;table&gt;&lt;/table&gt;</code><span> : This tag defines a table in the html document</span></li>
+<li><code>&lt;caption&gt;&lt;/caption&gt;</code><span> : This tag defines a caption for the table</span></li>
+<li><code>&lt;th&gt;&lt;/th&gt;</code><span> : This tag helps to add header of the table</span></li>
+<li><code>&lt;tr&gt;&lt;/tr&gt;</code><span> : This tag helps to specify rows</span></li>
+<li><code>&lt;td&gt;&lt;/td&gt;</code><span> : This tag helps to add table data</span></li>
+<li><code>&lt;thead&gt;&lt;/thead&gt;</code><span> : Used to group all the header content of the table</span></li>
+<li><code>&lt;tbody&gt;&lt;/tbody&gt;</code><span> : Used to group all the body content of the table</span></li>
+<li><code>&lt;tfoot&gt;&lt;/tfoot&gt;</code><span> : Used to group all the footer content of the table</span></li>
+</ul><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span>Demo Table<span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Header 1<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Header 2<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Data 1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Data 2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Data 3<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Data 4<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tfoot</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Footer 1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Footer 2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tfoot</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</div></div></code></pre><p><img src="https://i.imgur.com/qK9nyjp.png" alt="" loading="lazy"></p><h2 id="Media" data-id="Media"><a class="anchor hidden-xs" href="#Media" title="Media"><span class="octicon octicon-link"></span></a><span>Media</span></h2><h3 id="Image" data-id="Image"><a class="anchor hidden-xs" href="#Image" title="Image"><span class="octicon octicon-link"></span></a><span>Image</span></h3><h5 id="Should-be-known-before-learning-media-tags" data-id="Should-be-known-before-learning-media-tags"><a class="anchor hidden-xs" href="#Should-be-known-before-learning-media-tags" title="Should-be-known-before-learning-media-tags"><span class="octicon octicon-link"></span></a>Should be known before learning media tags</h5><ul>
+<li><a href="#Attributes"><span>Attributes</span></a></li>
+<li><a href="#Links"><span>Links</span></a></li>
+</ul><h5 id="We-have-already-learnt-a-bit-about-img-tag-previouly-in-some-sections-Here-we-would-be-looking-into-it-with-more-depth" data-id="We-have-already-learnt-a-bit-about-img-tag-previouly-in-some-sections-Here-we-would-be-looking-into-it-with-more-depth"><a class="anchor hidden-xs" href="#We-have-already-learnt-a-bit-about-img-tag-previouly-in-some-sections-Here-we-would-be-looking-into-it-with-more-depth" title="We-have-already-learnt-a-bit-about-img-tag-previouly-in-some-sections-Here-we-would-be-looking-into-it-with-more-depth"><span class="octicon octicon-link"></span></a>We have already learnt a bit about img tag previouly in some sections. Here we would be looking into it with more depth</h5><h5 id="The-image-tag-has-2-most-important-attributes" data-id="The-image-tag-has-2-most-important-attributes"><a class="anchor hidden-xs" href="#The-image-tag-has-2-most-important-attributes" title="The-image-tag-has-2-most-important-attributes"><span class="octicon octicon-link"></span></a>The image tag has 2 most important attributes: </h5><ul>
+<li><code>src</code><span> : Specifies the url</span></li>
+<li><code>alt</code><span> : Specifies the alternate message if the image is not loaded</span></li>
+</ul><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://antern.co/images/textlogo.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"antern-logo"</span>&gt;</span>
+</div></div></code></pre><h5 id="If-somehow-the-image-is-not-loaded-then-the-alt-text-would-be-shown" data-id="If-somehow-the-image-is-not-loaded-then-the-alt-text-would-be-shown"><a class="anchor hidden-xs" href="#If-somehow-the-image-is-not-loaded-then-the-alt-text-would-be-shown" title="If-somehow-the-image-is-not-loaded-then-the-alt-text-would-be-shown"><span class="octicon octicon-link"></span></a>If somehow the image is not loaded then the alt text would be shown</h5><h3 id="Audio" data-id="Audio"><a class="anchor hidden-xs" href="#Audio" title="Audio"><span class="octicon octicon-link"></span></a><span>Audio</span></h3><h5 id="With-the-help-of-Audio-tag-we-can-add-audio-files-in-our-html-document" data-id="With-the-help-of-Audio-tag-we-can-add-audio-files-in-our-html-document"><a class="anchor hidden-xs" href="#With-the-help-of-Audio-tag-we-can-add-audio-files-in-our-html-document" title="With-the-help-of-Audio-tag-we-can-add-audio-files-in-our-html-document"><span class="octicon octicon-link"></span></a>With the help of Audio tag we can add audio files in our html document</h5><h5 id="Within-audio-tag-theres-another-tag-called-source-tag-it-would-help-us-to-add-the-source-of-audio-One-more-thing-there-are-some-audio-typesformat-that-are-not-supported-in-some-browsers-We-can-provide-as-many-source-tags-we-want-but-the-browser-will-the-pick-the-one-whose-audio-typeformat-is-supported-in-the-browser" data-id="Within-audio-tag-theres-another-tag-called-source-tag-it-would-help-us-to-add-the-source-of-audio-One-more-thing-there-are-some-audio-typesformat-that-are-not-supported-in-some-browsers-We-can-provide-as-many-source-tags-we-want-but-the-browser-will-the-pick-the-one-whose-audio-typeformat-is-supported-in-the-browser"><a class="anchor hidden-xs" href="#Within-audio-tag-theres-another-tag-called-source-tag-it-would-help-us-to-add-the-source-of-audio-One-more-thing-there-are-some-audio-typesformat-that-are-not-supported-in-some-browsers-We-can-provide-as-many-source-tags-we-want-but-the-browser-will-the-pick-the-one-whose-audio-typeformat-is-supported-in-the-browser" title="Within-audio-tag-theres-another-tag-called-source-tag-it-would-help-us-to-add-the-source-of-audio-One-more-thing-there-are-some-audio-typesformat-that-are-not-supported-in-some-browsers-We-can-provide-as-many-source-tags-we-want-but-the-browser-will-the-pick-the-one-whose-audio-typeformat-is-supported-in-the-browser"><span class="octicon octicon-link"></span></a>Within audio tag there's another tag called source tag it would help us to add the source of audio. One more thing there are some audio types/format that are not supported in some browser's. We can provide as many source tags we want but the browser will the pick the one whose audio type/format is supported in the browser</h5><ul>
+<li><code>&lt;audio&gt;&lt;/audio&gt;</code><span> : Embed sounds in the html document</span></li>
+<li><code>&lt;source&gt;</code><span> : We can provide the source of the audio</span></li>
+</ul><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">&lt;audio controls&gt;
+    &lt;<span class="hljs-built_in">source</span> src=<span class="hljs-string">"audio.mp3"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"audio/mpeg"</span>&gt;
+    &lt;<span class="hljs-built_in">source</span> src=<span class="hljs-string">"audio2.ogg"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"audio/ogg"</span>&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</div></div></code></pre><h3 id="Video" data-id="Video"><a class="anchor hidden-xs" href="#Video" title="Video"><span class="octicon octicon-link"></span></a><span>Video</span></h3><h5 id="With-the-help-of-Video-tag-we-can-embed-video-files-in-our-html-document" data-id="With-the-help-of-Video-tag-we-can-embed-video-files-in-our-html-document"><a class="anchor hidden-xs" href="#With-the-help-of-Video-tag-we-can-embed-video-files-in-our-html-document" title="With-the-help-of-Video-tag-we-can-embed-video-files-in-our-html-document"><span class="octicon octicon-link"></span></a>With the help of Video tag we can embed video files in our html document</h5><h5 id="Within-video-tag-theres-another-tag-called-source-tag-it-would-help-us-to-add-the-source-of-videos-One-more-thing-there-are-some-video-typesformat-that-are-not-supported-in-some-browsers-We-can-provide-as-many-source-tags-we-want-but-the-browser-will-the-pick-the-one-whose-video-typeformat-is-supported-in-the-browser" data-id="Within-video-tag-theres-another-tag-called-source-tag-it-would-help-us-to-add-the-source-of-videos-One-more-thing-there-are-some-video-typesformat-that-are-not-supported-in-some-browsers-We-can-provide-as-many-source-tags-we-want-but-the-browser-will-the-pick-the-one-whose-video-typeformat-is-supported-in-the-browser"><a class="anchor hidden-xs" href="#Within-video-tag-theres-another-tag-called-source-tag-it-would-help-us-to-add-the-source-of-videos-One-more-thing-there-are-some-video-typesformat-that-are-not-supported-in-some-browsers-We-can-provide-as-many-source-tags-we-want-but-the-browser-will-the-pick-the-one-whose-video-typeformat-is-supported-in-the-browser" title="Within-video-tag-theres-another-tag-called-source-tag-it-would-help-us-to-add-the-source-of-videos-One-more-thing-there-are-some-video-typesformat-that-are-not-supported-in-some-browsers-We-can-provide-as-many-source-tags-we-want-but-the-browser-will-the-pick-the-one-whose-video-typeformat-is-supported-in-the-browser"><span class="octicon octicon-link"></span></a>Within video tag there's another tag called source tag it would help us to add the source of videos. One more thing there are some video types/format that are not supported in some browser's. We can provide as many source tags we want but the browser will the pick the one whose video type/format is supported in the browser</h5><ul>
+<li><code>&lt;video&gt;&lt;/video&gt;</code><span> : Embed videos in the html document</span></li>
+<li><code>&lt;source&gt;</code><span> : We can provide the source of the video</span></li>
+</ul><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">&lt;video width=<span class="hljs-string">"512"</span> height=<span class="hljs-string">"512"</span> controls&gt;
+    &lt;source src=<span class="hljs-string">"video.mp4"</span> <span class="hljs-keyword">type</span>="video/mp4"&gt;
+    <span class="hljs-type">Your</span> browser does not sup<span class="hljs-keyword">port</span> the video element.
+&lt;/video&gt;
+</div></div></code></pre><h2 id="Forms" data-id="Forms"><a class="anchor hidden-xs" href="#Forms" title="Forms"><span class="octicon octicon-link"></span></a><span>Forms</span></h2><h5 id="HTML-Forms-are-used-for-entering-data-Mostly-it-is-sent-to-the-servers-for-processing-the-collected-data-through-froms" data-id="HTML-Forms-are-used-for-entering-data-Mostly-it-is-sent-to-the-servers-for-processing-the-collected-data-through-froms"><a class="anchor hidden-xs" href="#HTML-Forms-are-used-for-entering-data-Mostly-it-is-sent-to-the-servers-for-processing-the-collected-data-through-froms" title="HTML-Forms-are-used-for-entering-data-Mostly-it-is-sent-to-the-servers-for-processing-the-collected-data-through-froms"><span class="octicon octicon-link"></span></a>HTML Forms are used for entering data. Mostly it is sent to the servers for processing the collected data through froms.</h5><ul>
+<li><code>&lt;form&gt;&lt;/form&gt;</code><span> : Used to create form element in HTML.</span></li>
+<li><code>&lt;input&gt;</code><span> : Used to create input field in HTML</span></li>
+<li><code>&lt;label&gt;&lt;/label&gt;</code><span> : Used to create labels</span></li>
+</ul><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"name"</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"email"</span>&gt;</span>Email:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"email"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Submit"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</div></div></code></pre><h5 id="As-you-can-see-in-the-input-tag-there-are-multiple-types-and-all-of-these-types-does-different-things-All-types-are-listed-below" data-id="As-you-can-see-in-the-input-tag-there-are-multiple-types-and-all-of-these-types-does-different-things-All-types-are-listed-below"><a class="anchor hidden-xs" href="#As-you-can-see-in-the-input-tag-there-are-multiple-types-and-all-of-these-types-does-different-things-All-types-are-listed-below" title="As-you-can-see-in-the-input-tag-there-are-multiple-types-and-all-of-these-types-does-different-things-All-types-are-listed-below"><span class="octicon octicon-link"></span></a>As you can see in the input tag there are multiple types and all of these types does different things. All types are listed below.</h5><h4 id="Input-Types" data-id="Input-Types"><a class="anchor hidden-xs" href="#Input-Types" title="Input-Types"><span class="octicon octicon-link"></span></a><span>Input Types</span></h4><ul>
+<li><code>&lt;input type="text"&gt;</code><span> : Creates a text input field</span></li>
+<li><code>&lt;input type="radio"&gt;</code><span> : Creates radio buttons</span></li>
+<li><code>&lt;input type="checkbox"&gt;</code><span> : Creates check boxes</span></li>
+<li><code>&lt;input type="submit"&gt;</code><span> : Creates a submit button</span></li>
+<li><code>&lt;input type="button"&gt;</code><span> : Creates a button</span></li>
+</ul><h4 id="Radio-Buttons" data-id="Radio-Buttons"><a class="anchor hidden-xs" href="#Radio-Buttons" title="Radio-Buttons"><span class="octicon octicon-link"></span></a><span>Radio Buttons</span></h4><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"c1"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"c1"</span>&gt;</span>BMW<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"c2"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"c2"</span>&gt;</span>McLaren<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c3"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"c3"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"c3"</span>&gt;</span>Audi<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</div></div></code></pre><h4 id="Checkbox" data-id="Checkbox"><a class="anchor hidden-xs" href="#Checkbox" title="Checkbox"><span class="octicon octicon-link"></span></a><span>Checkbox</span></h4><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"c1"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"c1"</span>&gt;</span>BMW<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"c2"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"c2"</span>&gt;</span>McLaren<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c3"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"c3"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"c3"</span>&gt;</span>Audi<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</div></div></code></pre><h4 id="Text-and-Submit" data-id="Text-and-Submit"><a class="anchor hidden-xs" href="#Text-and-Submit" title="Text-and-Submit"><span class="octicon octicon-link"></span></a><span>Text and Submit</span></h4><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"c1"</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"c1"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"Name"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Submit"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</div></div></code></pre><h2 id="Container-Tags" data-id="Container-Tags"><a class="anchor hidden-xs" href="#Container-Tags" title="Container-Tags"><span class="octicon octicon-link"></span></a><span>Container Tags</span></h2><h5 id="These-tags-are-used-to-create-seperate-blocks-or-containers-in-html" data-id="These-tags-are-used-to-create-seperate-blocks-or-containers-in-html"><a class="anchor hidden-xs" href="#These-tags-are-used-to-create-seperate-blocks-or-containers-in-html" title="These-tags-are-used-to-create-seperate-blocks-or-containers-in-html"><span class="octicon octicon-link"></span></a>These tags are used to create seperate blocks or containers in html.</h5><ul>
+<li><code>&lt;div&gt;&lt;/div&gt;</code><span> : It is used to create blocks/containers for content.</span></li>
+<li><code>&lt;span&gt;&lt;/span&gt;</code><span> : It is used to create in-line containers/blocks</span></li>
+</ul><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">&lt;<span class="hljs-selector-tag">div</span>&gt;
+  &lt;<span class="hljs-selector-tag">p</span>&gt;Created <span class="hljs-selector-tag">a</span> container&lt;/<span class="hljs-selector-tag">p</span>&gt;
+  &lt;<span class="hljs-selector-tag">p</span>&gt;Created <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">span</span>&gt;in line container&lt;/<span class="hljs-selector-tag">span</span>&gt;&lt;/<span class="hljs-selector-tag">p</span>&gt;
+&lt;/<span class="hljs-selector-tag">div</span>&gt;
+</div></div></code></pre><h2 id="HTML-Semantics" data-id="HTML-Semantics"><a class="anchor hidden-xs" href="#HTML-Semantics" title="HTML-Semantics"><span class="octicon octicon-link"></span></a><span>HTML Semantics</span></h2><h5 id="HTML-Semantics-are-self-explanable-tags-I-mean-just-by-reading-the-name-of-the-semantic-tags-you-can-tell-what-it-does" data-id="HTML-Semantics-are-self-explanable-tags-I-mean-just-by-reading-the-name-of-the-semantic-tags-you-can-tell-what-it-does"><a class="anchor hidden-xs" href="#HTML-Semantics-are-self-explanable-tags-I-mean-just-by-reading-the-name-of-the-semantic-tags-you-can-tell-what-it-does" title="HTML-Semantics-are-self-explanable-tags-I-mean-just-by-reading-the-name-of-the-semantic-tags-you-can-tell-what-it-does"><span class="octicon octicon-link"></span></a>HTML Semantics are self explanable tags. I mean just by reading the name of the semantic tags you can tell what it does.</h5><h4 id="Examples" data-id="Examples"><a class="anchor hidden-xs" href="#Examples" title="Examples"><span class="octicon octicon-link"></span></a>Examples</h4><h5 id="Non-Semantic-Tags" data-id="Non-Semantic-Tags"><a class="anchor hidden-xs" href="#Non-Semantic-Tags" title="Non-Semantic-Tags"><span class="octicon octicon-link"></span></a>Non Semantic Tags:</h5><ul>
+<li><code>&lt;div&gt;&lt;/div&gt;</code></li>
+<li><code>&lt;span&gt;&lt;/span&gt;</code></li>
+</ul><h5 id="Semantic-Tags" data-id="Semantic-Tags"><a class="anchor hidden-xs" href="#Semantic-Tags" title="Semantic-Tags"><span class="octicon octicon-link"></span></a>Semantic Tags:</h5><ul>
+<li><code>&lt;section&gt;&lt;/section&gt;</code></li>
+<li><code>&lt;aside&gt;&lt;/aside&gt;</code></li>
+</ul><p><img src="https://i.imgur.com/uu8Vexm.gif" alt="Semantic Chart" loading="lazy"></p><ul>
+<li><code>&lt;section&gt;&lt;/section&gt;</code><span> : It is used to create a section</span></li>
+<li><code>&lt;article&gt;&lt;/article&gt;</code><span> : It represents self contained content</span></li>
+<li><code>&lt;aside&gt;&lt;/aside&gt;</code><span> : It is used to create content that is to be place at the side.</span></li>
+<li><code>&lt;header&gt;&lt;/header&gt;</code><span> : Specifies header in html document</span></li>
+<li><code>&lt;footer&gt;&lt;/footer&gt;</code><span> : Used to create content to be placed in footer</span></li>
+<li><code>&lt;nav&gt;&lt;/nav&gt;</code><span> : Used to create navigation links</span></li>
+</ul><h4 id="Example-Code" data-id="Example-Code"><a class="anchor hidden-xs" href="#Example-Code" title="Example-Code"><span class="octicon octicon-link"></span></a>Example Code</h4><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>HTML Semantics<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Header --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+	<span class="hljs-comment">&lt;!-- Nav --&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+    	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Left"</span>&gt;</span>
+        	<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Right"</span>&gt;</span>
+        	<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Blogs<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Projects<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Section --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This is a Section<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span>/&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Article --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This is an Article<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Aside --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">aside</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Aside Content<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Blogs<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Projects<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Footer --&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Footer<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:example@gmail.com"</span>&gt;</span>Example Email<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+
+
+</div></div></code></pre><h2 id="Meta-Properties" data-id="Meta-Properties"><a class="anchor hidden-xs" href="#Meta-Properties" title="Meta-Properties"><span class="octicon octicon-link"></span></a><span>Meta Properties</span></h2><h5 id="Meta-tags-helps-to-define-meta-data-for-our-website-It-is-really-helpful-in-multiple-ways-Metadata-is-the-information-of-our-website" data-id="Meta-tags-helps-to-define-meta-data-for-our-website-It-is-really-helpful-in-multiple-ways-Metadata-is-the-information-of-our-website"><a class="anchor hidden-xs" href="#Meta-tags-helps-to-define-meta-data-for-our-website-It-is-really-helpful-in-multiple-ways-Metadata-is-the-information-of-our-website" title="Meta-tags-helps-to-define-meta-data-for-our-website-It-is-really-helpful-in-multiple-ways-Metadata-is-the-information-of-our-website"><span class="octicon octicon-link"></span></a>Meta tags helps to define meta data for our website. It is really helpful in multiple ways. Metadata is the information of our website.</h5><pre><code class="htmlmixed hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"keywords"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"HTML, Cheat Sheet, Web Development"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"HTML Cheat Sheet by Antern"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"author"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Priyanshu Bhattacharjee"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+</div></div></code></pre><ul>
+<li><code>&lt;meta charset="UTF-8"&gt;</code><span> : Specifies the Character Encoding for the HTML Document</span></li>
+<li><code>&lt;meta name="keywords" content="HTML, Cheat Sheet, Web Development"&gt;</code><span> : Defines the keywords of the website.</span></li>
+<li><code>&lt;meta name="description" content="HTML Cheat Sheet by Antern"&gt;</code><span> : Adds description of the website</span></li>
+<li><code>&lt;meta name="author" content="Priyanshu Bhattacharjee"&gt;</code><span> : Adds authors name in the website</span></li>
+<li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code><span> : Set’s the viewport of the website</span></li>
+</ul></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li><a href="#HTML--Hyper-Text-Markup-Language" title="HTML : Hyper Text Markup Language">HTML : Hyper Text Markup Language</a><ul class="nav">
+<li><a href="#-Listings-and-Instructions" title=" Listings and Instructions"> Listings and Instructions</a></li>
+<li><a href="#-Content-Index" title=" Content Index"> Content Index</a></li>
+<li><a href="#Introduction" title="Introduction">Introduction</a></li>
+<li><a href="#Elements" title="Elements">Elements</a></li>
+<li><a href="#Attributes" title="Attributes">Attributes</a></li>
+<li><a href="#Basic-Structure" title="Basic Structure">Basic Structure</a></li>
+<li><a href="#Basic-Tags" title="Basic Tags">Basic Tags</a></li>
+<li><a href="#TextParagraphs" title="Text/Paragraphs">Text/Paragraphs</a><ul class="nav">
+<li><a href="#Code-Snippet" title="Code Snippet">Code Snippet</a></li>
+</ul>
+</li>
+<li><a href="#Text-Formatting" title="Text Formatting">Text Formatting</a></li>
+<li><a href="#Code" title="Code">Code</a></li>
+<li><a href="#Lists" title="Lists">Lists</a><ul class="nav">
+<li><a href="#Ordered-Lists" title="Ordered Lists">Ordered Lists</a></li>
+<li><a href="#Unordered-Lists" title="Unordered Lists">Unordered Lists</a></li>
+</ul>
+</li>
+<li><a href="#Links" title="Links">Links</a></li>
+<li><a href="#Tables" title="Tables">Tables</a></li>
+<li><a href="#Media" title="Media">Media</a><ul class="nav">
+<li><a href="#Image" title="Image">Image</a></li>
+<li><a href="#Audio" title="Audio">Audio</a></li>
+<li><a href="#Video" title="Video">Video</a></li>
+</ul>
+</li>
+<li><a href="#Forms" title="Forms">Forms</a></li>
+<li><a href="#Container-Tags" title="Container Tags">Container Tags</a></li>
+<li><a href="#HTML-Semantics" title="HTML Semantics">HTML Semantics</a></li>
+<li><a href="#Meta-Properties" title="Meta Properties">Meta Properties</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li><a href="#HTML--Hyper-Text-Markup-Language" title="HTML : Hyper Text Markup Language">HTML : Hyper Text Markup Language</a><ul class="nav">
+<li><a href="#-Listings-and-Instructions" title=" Listings and Instructions"> Listings and Instructions</a></li>
+<li><a href="#-Content-Index" title=" Content Index"> Content Index</a></li>
+<li><a href="#Introduction" title="Introduction">Introduction</a></li>
+<li><a href="#Elements" title="Elements">Elements</a></li>
+<li><a href="#Attributes" title="Attributes">Attributes</a></li>
+<li><a href="#Basic-Structure" title="Basic Structure">Basic Structure</a></li>
+<li><a href="#Basic-Tags" title="Basic Tags">Basic Tags</a></li>
+<li><a href="#TextParagraphs" title="Text/Paragraphs">Text/Paragraphs</a><ul class="nav">
+<li><a href="#Code-Snippet" title="Code Snippet">Code Snippet</a></li>
+</ul>
+</li>
+<li><a href="#Text-Formatting" title="Text Formatting">Text Formatting</a></li>
+<li><a href="#Code" title="Code">Code</a></li>
+<li><a href="#Lists" title="Lists">Lists</a><ul class="nav">
+<li><a href="#Ordered-Lists" title="Ordered Lists">Ordered Lists</a></li>
+<li><a href="#Unordered-Lists" title="Unordered Lists">Unordered Lists</a></li>
+</ul>
+</li>
+<li><a href="#Links" title="Links">Links</a></li>
+<li><a href="#Tables" title="Tables">Tables</a></li>
+<li><a href="#Media" title="Media">Media</a><ul class="nav">
+<li><a href="#Image" title="Image">Image</a></li>
+<li><a href="#Audio" title="Audio">Audio</a></li>
+<li><a href="#Video" title="Video">Video</a></li>
+</ul>
+</li>
+<li><a href="#Forms" title="Forms">Forms</a></li>
+<li><a href="#Container-Tags" title="Container Tags">Container Tags</a></li>
+<li><a href="#HTML-Semantics" title="HTML Semantics">HTML Semantics</a></li>
+<li><a href="#Meta-Properties" title="Meta Properties">Meta Properties</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
